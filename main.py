@@ -114,11 +114,11 @@ def predict(file):
     print("Number of samples: {}".format(len(y)))
     print("Minimum amplitude: {:.3f}".format(round(min(y), 3)))
     print("Maximum amplitude: {:.3f}".format(round(max(y), 3)))
-    mean_apm_times_1000 = round(np.mean(y) * 1000, 3)
+    mean_amp_times_1000 = round(np.mean(y) * 1000, 3)
     print("Mean amplitude * 1000: {:.3f}".format(sum(y) / len(y) * 1000))
     print(50 * "=")
     print()
-    if mean_apm_times_1000 > -0.2 and mean_apm_times_1000 <= 0:
+    if mean_amp_times_1000 > -0.2 and mean_amp_times_1000 <= 0:
         print("This is a speech file")
     else:
         print("This is a music file") 
